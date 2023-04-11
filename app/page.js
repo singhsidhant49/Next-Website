@@ -4,16 +4,24 @@ import { About, Explore, Feedback, GetStarted, Hero, Insights, WhatsNew, World }
 const Page = () => (
   <div>
     <Navbar />
-    <Hero />
+     <Hero />
     <About />
+
     <Explore />
+
     <GetStarted />
     <WhatsNew />
+
     <World />
+
     <Insights />
     <Feedback />
     <Footer />
+
   </div>
+
+
 );
 
 export default Page;
+
