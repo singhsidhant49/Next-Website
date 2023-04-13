@@ -2,9 +2,15 @@ import { Footer, Navbar } from '../components';
 import { About, Explore, Feedback, GetStarted, Hero, Insights, WhatsNew, World } from '../sections';
 
 const Page = () => (
-  <div>
-    <Navbar />
-     <Hero />
+  <>
+     <Navbar />
+    <section className="bg-cover bg-center  " style={{ backgroundImage: "url('/backgroundimg.webp')", height:'auto'}}>
+
+   
+      <Hero />
+
+    </section>
+
     <About />
 
     <Explore />
@@ -18,7 +24,7 @@ const Page = () => (
     <Feedback />
     <Footer />
 
-  </div>
+  </>
 
 
 );

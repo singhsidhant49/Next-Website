@@ -18,7 +18,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className=" shadow-md w-full flex flex-wrap justify-between  items-center bg-pink-200 gap-5   p-6" >
+   
+      <nav className="shadow-md w-full flex flex-wrap justify-between  items-center bg-pink-200 gap-5   p-6" >
         <a href="https://flowbite.com" className="flex items-center ml-6">
           <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="Flowbite Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
@@ -62,7 +63,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <nav className=" sticky top-0 w-full    bg-slate-50">
+      <nav className=" sticky top-0 w-full    bg-slate-50  z-20">
         <div className=" w-full flex flex-row justify-between items-center shadow-md   p-6">
           <HiMenu fontSize={40} className="cursor-pointer flex md:hidden" onClick={() => setToggleSidebar(true)} />
 
@@ -104,6 +105,8 @@ const Navbar = () => {
           </div>
         )}
       </nav>
+
+ 
     </>
   )
 }
