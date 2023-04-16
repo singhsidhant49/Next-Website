@@ -1,9 +1,7 @@
 'use client';
 
 const WhatsNew = () => (
-  <section>
-    What's new section
-  </section>
+<section>sdfsdf</section>
 );
 
 export default WhatsNew;

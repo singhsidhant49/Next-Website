@@ -5,6 +5,9 @@ import StartSteps from './StartSteps';
 import NewFeatures from './NewFeatures';
 import InsightCard from './InsightCard';
 import Footer from './Footer';
+import Crousel from './Crousel';
+
+
 // import StyleLink from './StyleLink';
 
 export {
@@ -16,6 +19,7 @@ export {
   ExploreCard,
   InsightCard,
   Footer,
+  Crousel,
   // StyleLink,
 };
 

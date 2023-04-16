@@ -33,7 +33,8 @@ const Hero = () => (
       <img className="object-cover object-center rounded" alt="hero" src="tree.png"/>
     </div>
     <div className="flex-1 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-      <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Knausgaard typewriter readymade marfa</h1>
+  
+      <h1 className=" sm:text-4xl text-3xl mb-4 font-bold text-blue-600">Knausgaard typewriter readymade marfa</h1>
       <p className="mb-8 leading-relaxed">Chillwave portland ugh, knausgaard fam polaroid iPhone. Man braid swag typewriter affogato, hella selvage wolf narwhal dreamcatcher.</p>
       <div className="flex w-full md:justify-start justify-center items-end">
         <div className="relative mr-4 lg:w-full xl:w-1/2 w-2/4">
