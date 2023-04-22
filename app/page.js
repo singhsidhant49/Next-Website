@@ -1,5 +1,5 @@
 import { Footer, Navbar } from '../components';
-import { About, Explore, Feedback, GetStarted, Hero, Insights, WhatsNew, World } from '../sections';
+import { About, Explore, Feedback, GetStarted, Hero, Insights, Logos, Testimonial, WhatsNew, World } from '../sections';
 import { Teams} from '../sections/Teams';
 
 const Page = () => (
@@ -23,6 +23,8 @@ const Page = () => (
     <Insights />
     <Feedback />
     <WhatsNew />
+    <Testimonial/>
+    <Logos/>
     <Teams/>
     <Footer />
 
