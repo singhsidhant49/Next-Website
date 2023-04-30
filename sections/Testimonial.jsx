@@ -2,9 +2,11 @@
 
 const Testimonial = () => {
   return (
+
+    <>
     
-     <section class="py-12 bg-gray-50 sm:py-16 lg:py-20">
-    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+     <section className="text-gray-600 py-2 body-font overflow-hidden px-3 lg:px-28 ">
+    <div class=" ">
         <div class="flex flex-col items-center">
             <div class="text-center">
                 <p class="text-lg font-medium text-gray-600 font-pj">2,157 people have said how good Rareblocks</p>
@@ -163,6 +165,16 @@ const Testimonial = () => {
         </div>
     </div>
 </section>
+
+
+
+
+
+
+
+
+
+</>
   )
 }
 

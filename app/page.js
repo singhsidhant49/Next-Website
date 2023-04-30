@@ -1,32 +1,37 @@
 import { Footer, Navbar } from '../components';
-import { About, Explore, Feedback, GetStarted, Hero, Insights, Logos, Testimonial, WhatsNew, World } from '../sections';
+import { About, Contact, Explore, Feedback, GetStarted, Hero, Insights, Logos, Pricing, Stats, Testimonial, WhatsNew, World } from '../sections';
 import { Teams} from '../sections/Teams';
+import MainLayout from '../components/MainLayout';
+import TechStack from '../sections/TechStack';
 
 const Page = () => (
   <>
     <Navbar />
-    <section className="bg-cover bg-center  " style={{ backgroundImage: "url('/backgroundimg.webp')", height: 'auto' }}>
+    <Hero/>
+    <About/>
+    <Stats/>
+     <World/>
+    
+    <GetStarted/>
+{/* <TechStack/> */}
+
+<Explore/>
+   
+     
+    <Feedback/>
 
 
-      <Hero />
-
-    </section>
-
-    <About />
-
-    <Explore />
-
-    <GetStarted />
-    <World />
-
-
-    <Insights />
-    <Feedback />
-    <WhatsNew />
+      <WhatsNew />
     <Testimonial/>
+    {/* <Pricing/> */}
+     {/* <Insights/> */}
     <Logos/>
     <Teams/>
+    <Contact/>
     <Footer />
+
+  
+ 
 
   </>
 
