@@ -6,7 +6,7 @@ import { StyleButton } from "../components/StyleLink";
 const About = () => (
 
   <>
-  <section className="text-gray-600 body-font overflow-hidden px-3 lg:px-28 ">
+  <section id="section2" className="text-gray-600 body-font overflow-hidden px-3 lg:px-28 ">
     <div className=" bg-yellow-400  flex self-center  h-4/6 absolute -left-16 w-28 shadow-[5px_8px_70px_0px_#fed7d7] -z-10 " style={{ borderRadius: '200%' }}  />
 
     <div className="container   py-16 ">

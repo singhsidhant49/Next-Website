@@ -2,12 +2,13 @@
 
 import React, { useState } from 'react';
 import { HiMenu } from 'react-icons/hi';
-import Link from 'next/link';
+import { Link } from 'react-scroll';
 import { AiFillCloseCircle } from 'react-icons/ai';
-import { TfiEmail, TfiFacebook, TfiInstagram, TfiLocationPin, TfiPinterest, TfiTwitter, TfiYoutube } from 'react-icons/tfi';
+// import { TfiEmail, TfiFacebook, TfiInstagram, TfiLocationPin, TfiPinterest, TfiTwitter, TfiYoutube } from 'react-icons/tfi';
+import { TfiEmail, TfiLocationPin } from 'react-icons/tfi';
 import { BiPhoneCall } from 'react-icons/bi';
 
-import { StyleButton, StyleFill, StyleHover } from './StyleLink';
+// import { StyleButton, StyleFill, StyleHover } from './StyleLink';
 
 // const isNotActiveStyle = 'flex items-center px-5 gap-3 text-gray-500 hover:text-black transition-all duration-200 ease-in-out capitalize';
 // const isActiveStyle = 'flex items-center px-5 gap-3 font-extrabold border-r-2 border-black  transition-all duration-200 ease-in-out capitalize';
@@ -16,20 +17,20 @@ const Navbar = () => {
   const [toggleSidebar, setToggleSidebar] = useState(false);
   return (
     <>
-      <nav className="shadow-md w-full flex flex-wrap justify-between items-center bg-pink-200 gap-5 p-6">
-        <a href="https://flowbite.com" className="flex items-center ml-6">
-          <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="Flowbite Logo" />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+      <nav className="shadow-md w-full flex flex-wrap justify-between items-center bg-blue-600 font-bold  text-white gap-5 p-6">
+        <a href="/" className="flex items-center ml-6">
+          <img src="logos.jpeg" className="h-8 mr-3" alt="Flowbite Logo" />
+          <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">INCROP PVT LTD</span>
         </a>
 
         <div className="flex items-center">
-          <div className="bg-slate-300 h-8 w-8 flex justify-center items-center rounded mx-1">
+          {/* <div className="bg-pink-600 h-8 w-8 flex justify-center items-center rounded mx-1">
             <TfiFacebook className="cursor-pointer" />
           </div>
-          <div className="bg-slate-300 h-8 w-8 flex justify-center items-center rounded mx-1">
+          <div className="bg-green-400 h-8 w-8 flex justify-center items-center rounded mx-1">
             <TfiInstagram fontSize={20} className="cursor-pointer" />
-          </div>
-          <div className="bg-slate-300 h-8 w-8 flex justify-center items-center rounded mx-1">
+          </div> */}
+          {/* <div className="bg-slate-300 h-8 w-8 flex justify-center items-center rounded mx-1">
             <TfiTwitter fontSize={20} className="cursor-pointer" />
           </div>
           <div className="bg-slate-300 h-8 w-8 flex justify-center items-center rounded mx-1">
@@ -37,7 +38,7 @@ const Navbar = () => {
           </div>
           <div className="bg-slate-300 h-8 w-8 flex justify-center items-center rounded mx-1">
             <TfiYoutube fontSize={20} className="cursor-pointer" />
-          </div>
+          </div> */}
         </div>
 
         <div className="flex gap-4  md:gap-8  flex-wrap">
@@ -49,12 +50,12 @@ const Navbar = () => {
           </div>
           <div className="flex items-center gap-5 md:gap-8">
             <BiPhoneCall fontSize={25} className="cursor-pointer" />
-            <p> <span className="text-xs">Reach Us</span> <br /> +91 7983928641</p>
+            <p> <span className="text-xs">Reach Us</span> <br /> +91 9456533619</p>
             <div className="border-l-2 border-gray-400 h-10" />
           </div>
           <div className="flex items-center gap-5 md:gap-8">
             <TfiEmail fontSize={25} className="cursor-pointer" />
-            <p> <span className="text-xs">Email Us At</span><br />singhsidhant49@gmail.com</p>
+            <p> <span className="text-xs">Email Us At</span><br />info@sheroincorp.com</p>
           </div>
         </div>
       </nav>
@@ -64,17 +65,44 @@ const Navbar = () => {
           <HiMenu fontSize={40} className="cursor-pointer flex md:hidden" onClick={() => setToggleSidebar(true)} />
           <ul className="hidden md:flex flex-row font-medium mt-0 ml-5 space-x-5 text-sm w-full item-center">
             <li>
-              {/* <Link href="/" className="" aria-current="page">Home</Link> */}
-              <StyleFill text="HOME" />
+              <Link to="section1" className="px-2 py-1 relative rounded group text-sm text-white font-small inline-block">
+                <span className="absolute top-0 left-0 w-full h-full rounded opacity-50 filter blur-sm bg-gradient-to-br from-purple-600 to-blue-500" />
+                <span className="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br filter group-active:opacity-0 rounded opacity-50 from-purple-600 to-blue-500" />
+                <span className="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded shadow-xl bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-purple-600 to-blue-500" />
+                <span className="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-purple-600 from-blue-500" />
+                <span className="relative">HOME</span>
+              </Link>
             </li>
             <li>
+              <Link to="section2" className="px-2 py-1 relative rounded group overflow-hidden font-small text-gray-900 inline-block">
+                <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-purple-600 group-hover:h-full opacity-90" />
+                <span className="relative group-hover:text-white">ABOUT</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="section3" className="px-2 py-1 relative rounded group overflow-hidden font-small text-gray-900 inline-block">
+                <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-purple-600 group-hover:h-full opacity-90" />
+                <span className="relative group-hover:text-white">SERVICES</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="section4" className="px-2 py-1 relative rounded group overflow-hidden font-small text-gray-900 inline-block">
+                <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-purple-600 group-hover:h-full opacity-90" />
+                <span className="relative group-hover:text-white">PORTFOLIO</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="section5" className="px-2 py-1 relative rounded group overflow-hidden font-small text-gray-900 inline-block">
+                <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-purple-600 group-hover:h-full opacity-90" />
+                <span className="relative group-hover:text-white">CONTACT</span>
+              </Link>
+            </li>
+
+            {/* <li>
               <StyleHover text="ABOUT US" />
             </li>
             <li>
               <StyleHover text="SERVICES" />
-            </li>
-            <li>
-              <StyleHover text="INDUSTRIES" />
             </li>
             <li>
               <StyleHover text="PORTFOLIO" />
@@ -85,7 +113,7 @@ const Navbar = () => {
             </li>
             <li>
               <StyleButton text="GET QUOTE" />
-            </li>
+            </li> */}
           </ul>
         </div>
         {toggleSidebar && (

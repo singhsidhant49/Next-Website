@@ -1,7 +1,45 @@
 'use client';
 
-const WhatsNew = () => (
+import React, { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
+const WhatsNew = () => {
+    const [name, setName] = useState('newsletter');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('newsletter');
+    const [number, setNumber] = useState('newsletter');
+    const [loading, setLoading] = useState(false);
+    const [subject, setSubject] = useState('newsletter');
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        console.log("hhiiiis")
+        try {
+          const response = await fetch('/api/sendEmail', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email, message, number, subject }),
+          });
+          const data = await response.text();
+          console.log(data);
+          toast.success('Email sent successfully!');
+          setLoading(false);
+          setName('');
+          setEmail('');
+          setSubject('');
+          setMessage('');
+          setNumber('');
+        } catch (error) {
+          console.error(error);
+    
+          toast.error('Internal Server Error!');
+          setLoading(false);
+        }
+      };
+      return(
     <section>
 
         <div className="relative bg-violet-600">
@@ -20,18 +58,31 @@ const WhatsNew = () => (
                     <p className="mb-6 text-base text-indigo-200 md:text-lg">
                         Want to stay ahead of the competition? Our newsletter delivers the latest updates and expert advice on software development and digital marketing strategies.
                     </p>
-                    <form className="flex flex-col items-center w-full mb-4 md:flex-row md:px-16">
+                    <form onSubmit={handleSubmit} className="flex flex-col items-center w-full mb-4 md:flex-row md:px-16">
                         <input
                             placeholder="Email"
                             required=""
+                            name="email"
+                            value={email} 
+                            onChange={(e) => setEmail(e.target.value)}
                             type="text"
-                            className="flex-grow w-full h-12 px-4 mb-3 text-white transition duration-200 border-2 border-transparent rounded appearance-none md:mr-2 md:mb-0 bg-deep-purple-900 focus:border-teal-accent-700 focus:outline-none focus:shadow-outline"
+                            className="flex-grow w-full h-12 px-4 mb-3  transition duration-200 border-2 border-transparent rounded appearance-none md:mr-2 md:mb-0 bg-deep-purple-900 focus:border-teal-accent-700 focus:outline-none focus:shadow-outline"
                         />
-                        <a href="/"
-                            className="inline-flex items-center justify-center w-full h-12 px-6 font-semibold tracking-wide text-gray-200 transition duration-200 rounded shadow-md md:w-auto hover:text-deep-purple-900 bg-teal-accent-400 hover:bg-teal-accent-700 focus:shadow-outline focus:outline-none">
-                            Subscribe
-                        </a>
+                        <button type="submit" className="inline-flex items-center justify-center w-full h-12 px-6 font-semibold tracking-wide text-gray-200 transition duration-200 rounded shadow-md md:w-auto hover:text-deep-purple-900 bg-teal-accent-400 hover:bg-teal-accent-700 focus:shadow-outline focus:outline-none">{loading ? 'Sending...' : 'Subscribe'}</button>
+                        
                     </form>
+                    <ToastContainer
+              position="bottom-right"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              style={{ zIndex: 2 }}
+            />
                     <p className="max-w-md mb-10 text-xs tracking-wide text-indigo-100 sm:text-sm sm:mx-auto md:mb-16">
                         Stay informed and take your business to the next level - subscribe now!
                     </p>
@@ -50,7 +101,8 @@ const WhatsNew = () => (
     </section>
 
 
-);
+)}
+
+
 
 export default WhatsNew;
-

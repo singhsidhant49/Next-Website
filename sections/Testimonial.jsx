@@ -1,5 +1,7 @@
 'use client';
 
+import Image from "next/image";
+
 const Testimonial = () => {
   return (
 
@@ -9,13 +11,11 @@ const Testimonial = () => {
     <div className=" ">
         <div className="flex flex-col items-center">
             <div className="text-center">
-                <p className="text-lg font-medium text-gray-600 font-pj">2,157 people have said how good Rareblocks</p>
+                <p className="text-lg font-medium text-gray-600 font-pj"> people have said how good Rareblocks</p>
                 <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">Our happy clients say about us</h2>
             </div>
 
-            <div className="mt-8 text-center md:mt-16 md:order-3">
-                <a href="#" title="" className="pb-2 text-base font-bold leading-7 text-gray-900 transition-all duration-200 border-b-2 border-gray-900 hover:border-gray-600 font-pj focus:outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 hover:text-gray-600"> Check all 2,157 reviews </a>
-            </div>
+           
 
             <div className="relative mt-10 md:mt-24 md:order-2">
                 <div className="absolute -inset-x-1 inset-y-16 md:-inset-x-2 md:-inset-y-6">
@@ -60,10 +60,10 @@ const Testimonial = () => {
                             </div>
 
                             <div className="flex items-center mt-8">
-                                <img className="flex-shrink-0 object-cover rounded-full w-11 h-11" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-1.png" alt="" />
+                            <Image src={require('../public/vipul.png')} className="flex-shrink-0 object-cover rounded-full w-11 h-11" />
                                 <div className="ml-4">
-                                    <p className="text-base font-bold text-gray-900 font-pj">Leslie Alexander</p>
-                                    <p className="mt-0.5 text-sm font-pj text-gray-600">Freelance React Developer</p>
+                                    <p className="text-base font-bold text-gray-900 font-pj">Akash Kumar singh</p>
+                                    {/* <p className="mt-0.5 text-sm font-pj text-gray-600">Freelance React Developer</p> */}
                                 </div>
                             </div>
                         </div>
@@ -108,8 +108,8 @@ const Testimonial = () => {
                             <div className="flex items-center mt-8">
                                 <img className="flex-shrink-0 object-cover rounded-full w-11 h-11" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-2.png" alt="" />
                                 <div className="ml-4">
-                                    <p className="text-base font-bold text-gray-900 font-pj">Jacob Jones</p>
-                                    <p className="mt-0.5 text-sm font-pj text-gray-600">Digital Marketer</p>
+                                    <p className="text-base font-bold text-gray-900 font-pj">Vivek rautela</p>
+                                    {/* <p className="mt-0.5 text-sm font-pj text-gray-600">Digital Marketer</p> */}
                                 </div>
                             </div>
                         </div>
@@ -152,10 +152,10 @@ const Testimonial = () => {
                             </div>
 
                             <div className="flex items-center mt-8">
-                                <img className="flex-shrink-0 object-cover rounded-full w-11 h-11" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-female.png" alt="" />
+                                <Image src={require('../public/saloni.png')} className="flex-shrink-0 object-cover rounded-full w-11 h-11" />
                                 <div className="ml-4">
-                                    <p className="text-base font-bold text-gray-900 font-pj">Jenny Wilson</p>
-                                    <p className="mt-0.5 text-sm font-pj text-gray-600">Graphic Designer</p>
+                                    <p className="text-base font-bold text-gray-900 font-pj">Saloni rawat</p>
+                                    {/* <p className="mt-0.5 text-sm font-pj text-gray-600">Graphic Designer</p> */}
                                 </div>
                             </div>
                         </div>

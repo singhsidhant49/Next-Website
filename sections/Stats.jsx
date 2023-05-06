@@ -19,7 +19,7 @@ const Stats = () => {
 				</svg>
 			</div>
 			<div className="flex flex-col justify-center align-middle">
-				<p className="text-3xl font-semibold leading-none">200</p>
+				<p className="text-3xl font-semibold leading-none">100</p>
 				<p className="capitalize">Orders</p>
 			</div>
 		</div>
@@ -33,7 +33,7 @@ const Stats = () => {
 				</svg>
 			</div>
 			<div className="flex flex-col justify-center align-middle">
-				<p className="text-3xl font-semibold leading-none">7500</p>
+				<p className="text-3xl font-semibold leading-none">300</p>
 				<p className="capitalize">New customers</p>
 			</div>
 		</div>
